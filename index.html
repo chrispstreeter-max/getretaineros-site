@@ -132,6 +132,23 @@ footer a:hover{color:var(--ink)}
 .venue .shot .duo .ipad{aspect-ratio:1668/2420}
 .pill.teal{background:#52BBAE;color:#04201d}
 
+/* gallery */
+.gallery{padding:20px 0 100px;position:relative}
+.gallery .center{margin-bottom:44px}
+.gallery .kicker{color:var(--accent2)}
+.marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.track{display:flex;gap:34px;width:max-content;align-items:flex-end;animation:slide 70s linear infinite;padding:10px 17px 30px}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(-50%)}}
+.g{flex:none;display:flex;flex-direction:column;align-items:center;gap:14px}
+.g .iphone{position:relative;width:210px;aspect-ratio:640/1391;height:auto}
+.g .ipad{position:relative;width:360px;aspect-ratio:3/4;height:auto;border-radius:28px;padding:11px}
+.g .ipad img{border-radius:18px}
+.g span{font-size:14px;color:var(--muted)}
+.appicon{width:28px;height:28px;border-radius:7px}
+@media (max-width:600px){.g .iphone{width:160px}.g .ipad{width:270px}.track{gap:22px}}
+@media (prefers-reduced-motion:reduce){.track{animation:none}.marquee{overflow-x:auto}}
+
 /* reveal */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
 .reveal.in{opacity:1;transform:none}
@@ -173,7 +190,7 @@ footer a:hover{color:var(--ink)}
   <div class="glow"></div>
   <div class="wrap">
     <div class="reveal">
-      <span class="eyebrow"><b></b>iPhone · iPad · Mac</span>
+      <span class="eyebrow"><img class="appicon" src="/icon.png" alt="">RetainerOS for iPhone · iPad · Mac</span>
       <h1>Run your design business from <em>one app.</em></h1>
       <p class="lead">Clients, quotes clients sign, invoices with HST, timelines and retainers. Built for designers and developers. Your work stays on your own devices.</p>
       <div class="ctas" id="get">
@@ -188,6 +205,11 @@ footer a:hover{color:var(--ink)}
     </div>
   </div>
 </header>
+
+<section class="gallery" aria-label="Screens from RetainerOS">
+  <div class="wrap center reveal"><div class="kicker">A look inside</div><h2>Every screen, built for real studio work.</h2></div>
+  <div class="marquee"><div class="track"><div class="g"><div class="iphone"><img src="/img/iphone-myday.webp" alt="RetainerOS My Day on iPhone" width="640" height="1391" loading="lazy"></div><span>My Day</span></div><div class="g"><div class="iphone"><img src="/img/iphone-projects.webp" alt="RetainerOS Projects board on iPhone" width="640" height="1391" loading="lazy"></div><span>Projects board</span></div><div class="g"><div class="ipad"><img src="/img/ipad-project.webp" alt="RetainerOS Project and timeline on iPad" width="1200" height="1600" loading="lazy"></div><span>Project and timeline</span></div><div class="g"><div class="iphone"><img src="/img/iphone-quote.webp" alt="RetainerOS Quote preview on iPhone" width="640" height="1391" loading="lazy"></div><span>Quote preview</span></div><div class="g"><div class="iphone"><img src="/img/iphone-sign.webp" alt="RetainerOS Sign on screen on iPhone" width="640" height="1391" loading="lazy"></div><span>Sign on screen</span></div><div class="g"><div class="ipad"><img src="/img/ipad-reports.webp" alt="RetainerOS Reports on iPad" width="1200" height="1600" loading="lazy"></div><span>Reports</span></div><div class="g"><div class="iphone"><img src="/img/iphone-invoices.webp" alt="RetainerOS Invoices on iPhone" width="640" height="1391" loading="lazy"></div><span>Invoices</span></div><div class="g"><div class="iphone"><img src="/img/iphone-project.webp" alt="RetainerOS Milestone sign-off on iPhone" width="640" height="1391" loading="lazy"></div><span>Milestone sign-off</span></div><div class="g"><div class="ipad"><img src="/img/ipad-tax.webp" alt="RetainerOS Expenses and HST on iPad" width="1200" height="1600" loading="lazy"></div><span>Expenses and HST</span></div><div class="g"><div class="iphone"><img src="/img/iphone-tax.webp" alt="RetainerOS Tax by quarter on iPhone" width="640" height="1391" loading="lazy"></div><span>Tax by quarter</span></div><div aria-hidden="true" style="display:contents"><div class="g"><div class="iphone"><img src="/img/iphone-myday.webp" alt="" width="640" height="1391" loading="lazy"></div><span>My Day</span></div><div class="g"><div class="iphone"><img src="/img/iphone-projects.webp" alt="" width="640" height="1391" loading="lazy"></div><span>Projects board</span></div><div class="g"><div class="ipad"><img src="/img/ipad-project.webp" alt="" width="1200" height="1600" loading="lazy"></div><span>Project and timeline</span></div><div class="g"><div class="iphone"><img src="/img/iphone-quote.webp" alt="" width="640" height="1391" loading="lazy"></div><span>Quote preview</span></div><div class="g"><div class="iphone"><img src="/img/iphone-sign.webp" alt="" width="640" height="1391" loading="lazy"></div><span>Sign on screen</span></div><div class="g"><div class="ipad"><img src="/img/ipad-reports.webp" alt="" width="1200" height="1600" loading="lazy"></div><span>Reports</span></div><div class="g"><div class="iphone"><img src="/img/iphone-invoices.webp" alt="" width="640" height="1391" loading="lazy"></div><span>Invoices</span></div><div class="g"><div class="iphone"><img src="/img/iphone-project.webp" alt="" width="640" height="1391" loading="lazy"></div><span>Milestone sign-off</span></div><div class="g"><div class="ipad"><img src="/img/ipad-tax.webp" alt="" width="1200" height="1600" loading="lazy"></div><span>Expenses and HST</span></div><div class="g"><div class="iphone"><img src="/img/iphone-tax.webp" alt="" width="640" height="1391" loading="lazy"></div><span>Tax by quarter</span></div></div></div></div>
+</section>
 
 <main>
 <section class="feat light" id="features"><div class="wrap">
