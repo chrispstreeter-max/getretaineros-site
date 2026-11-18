@@ -218,6 +218,15 @@ footer a:hover{color:var(--ink)}
 .venue .feats{margin-top:30px}
 @media (max-width:600px){.v-strip{margin-top:30px}}
 
+/* VenueOS at the top */
+.eyebrows{display:flex;flex-wrap:wrap;gap:8px}
+.eyebrow.also{text-decoration:none;border-color:rgba(82,187,174,.45);background:rgba(82,187,174,.10);color:#bfe9e2}
+.eyebrow.also:hover{background:rgba(82,187,174,.2)}
+.vlink{display:inline-flex;align-items:center;gap:7px;color:#8fe0d4!important}
+.vlink img{width:20px;height:20px;border-radius:5px}
+
+@media (max-width:600px){.eyebrow.also .wide{display:none}}
+
 /* reveal */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
 .reveal.in{opacity:1;transform:none}
@@ -251,7 +260,7 @@ footer a:hover{color:var(--ink)}
 <body>
 <nav><div class="wrap">
   <a class="brand" href="/"><img src="/icon.png" alt=""><span class="word round">Retainer<i>OS</i></span></a>
-  <div class="links"><a href="#features">Features</a><a href="#private">Privacy</a><a href="/support/">Support</a></div>
+  <div class="links"><a href="#features">Features</a><a href="#private">Privacy</a><a href="/support/">Support</a><a class="vlink" href="#venueos"><img src="/img/venueos-icon.png" alt="">VenueOS</a></div>
   <a class="pill solid" href="#get">Coming soon</a>
 </div></nav>
 
@@ -259,7 +268,7 @@ footer a:hover{color:var(--ink)}
   <div class="glow"></div>
   <div class="wrap">
     <div class="reveal">
-      <span class="eyebrow"><img class="appicon" src="/icon.png" alt="">RetainerOS for iPhone · iPad · Mac</span>
+      <div class="eyebrows"><span class="eyebrow"><img class="appicon" src="/icon.png" alt="">RetainerOS for iPhone · iPad · Mac</span><a class="eyebrow also" href="#venueos"><img class="appicon" src="/img/venueos-icon.png" alt="">Also from us: VenueOS<span class="wide"> for venues and caterers</span> <span aria-hidden="true">→</span></a></div>
       <h1>Run your design business from <em>one app.</em></h1>
       <p class="lead">Clients, quotes clients sign, invoices with HST, timelines and retainers. Built for designers and developers. Your work stays on your own devices.</p>
       <div class="ctas" id="get">
